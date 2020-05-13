@@ -18,6 +18,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     let imagePicker = UIImagePickerController()
     
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var label: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,6 +90,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             if(response.result.isSuccess) {
                 print("Got the wikipedia info.")
                 print(response)
+                
+                let flowerJSON : JSON = JSON(response.result.value!)
+                let pageID = flowerJSON["query"]["pageids"][0].stringValue
+                let flowerDescription = flowerJSON["query"]["pages"][pageID]["extract"].stringValue
+                self.label.text = flowerDescription
             }
         }
         

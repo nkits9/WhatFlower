@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ceh-fQ-1av">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,15 +16,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BLd-s1-fir">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="386.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="BLd-s1-fir" secondAttribute="height" multiplier="15:14" id="iiE-hW-M7A"/>
+                                </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1KS-9W-TCJ">
+                                <rect key="frame" x="20" y="484.5" width="374" height="367.5"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BLd-s1-fir" secondAttribute="bottom" id="5Bn-dh-9Ne"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BLd-s1-fir" secondAttribute="trailing" id="WNC-Jt-ETY"/>
-                            <constraint firstItem="BLd-s1-fir" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="szv-hu-C9d"/>
-                            <constraint firstItem="BLd-s1-fir" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uEY-lX-305"/>
+                            <constraint firstItem="BLd-s1-fir" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5lS-np-he7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1KS-9W-TCJ" secondAttribute="bottom" constant="10" id="H49-el-VGq"/>
+                            <constraint firstItem="1KS-9W-TCJ" firstAttribute="top" secondItem="BLd-s1-fir" secondAttribute="bottom" constant="10" id="J7f-VT-ZBQ"/>
+                            <constraint firstItem="1KS-9W-TCJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="JIL-gb-jhs"/>
+                            <constraint firstItem="BLd-s1-fir" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Uc4-ju-Hwr"/>
+                            <constraint firstItem="BLd-s1-fir" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="h2I-Id-ODt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1KS-9W-TCJ" secondAttribute="trailing" constant="20" id="kgg-9l-1dm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -38,11 +49,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="BLd-s1-fir" id="Dhp-6H-ezQ"/>
+                        <outlet property="label" destination="1KS-9W-TCJ" id="Nju-bI-gMB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="129.91071428571428"/>
+            <point key="canvasLocation" x="1028" y="130"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pZf-SV-2y2">
